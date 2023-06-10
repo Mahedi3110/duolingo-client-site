@@ -1,0 +1,19 @@
+.bgImg {
+    background: rgba(0, 0, 0, 0.8)url('https://cdn.mos.cms.futurecdn.net/MLcwbwCtdYcfU9dAtrbu64-1200-80.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    height: 42vw;
+}
+
+.bgImg2 {
+    background: rgba(0, 0, 0, 0.7)url('https://i.ibb.co/27Y6vB2/pexels-lalesh-aldarwish-194511.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    height: 42vw;
+}
