@@ -58,7 +58,7 @@ const Header = () => {
 
                     <Navbar.Toggle />
                 </div>
-                <Navbar className='bg-transparent mr-20'>
+                <Navbar className='!bg-transparent mr-20'>
                     <div className='mb-3 md:mb-0'>
                         <NavLink
                             className={({ isActive }) => isActive ? 'font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'font-bold hover:text-lime-600 mx-10'}
