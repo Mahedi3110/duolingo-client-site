@@ -13,6 +13,7 @@ import Login from './components/body/join/Login.jsx';
 import Register from './components/body/join/Register.jsx'
 import Dashboard from './components/body/dashboard/Dashboard.jsx';
 import Profile from './components/body/Profile.jsx';
+import PrivateRoute from './privateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,11 +46,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       },
       {
         path: '/profile',
-        element: <Profile></Profile>
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
       }
     ]
   },

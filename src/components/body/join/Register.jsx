@@ -11,6 +11,8 @@ const Register = () => {
     const sixPass = () => toast("Password can't be less than six digit.");
     const passError = () => toast("Confirm password dosen't match.");
     const strongPass = () => toast("Please input a strong password.");
+    const successful = () => toast("Registration successful.");
+    const unsuccessful = () => toast("Unsuccessful registration.");
 
     const { createUser, joinByGoogle, setLoading } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -32,6 +34,28 @@ const Register = () => {
                 console.log(result.user);
                 navigate(from, { replace: true })
                 setLoading(false)
+                const saveUser = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    img: result.user.photoURL,
+                    status: import.meta.env.VITE_STATUS
+                }
+                fetch('http://localhost:7000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            successful()
+                        }
+                        else {
+                            unsuccessful()
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error.message);
@@ -69,6 +93,29 @@ const Register = () => {
                     .then(() => {
                         navigate(from, { replace: true })
                         setLoading(false)
+                        const saveUser = {
+                            name: fullName,
+                            email: email,
+                            img: photo,
+                            status: import.meta.env.VITE_STATUS
+                        }
+                        fetch('http://localhost:7000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    successful()
+                                }
+                                else {
+                                    unsuccessful()
+                                }
+                            })
+
                     })
                     .catch(error => {
                         exist()

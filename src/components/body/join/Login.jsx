@@ -23,6 +23,28 @@ const Login = () => {
                 console.log(result.user);
                 navigate(from, { replace: true })
                 setLoading(false)
+                const saveUser = {
+                    name: result.user.displayName,
+                    email: result.user.email,
+                    img: result.user.photoURL,
+                    status: import.meta.env.VITE_STATUS
+                }
+                fetch('http://localhost:7000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            successful()
+                        }
+                        else {
+                            unsuccessful()
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error.message);
