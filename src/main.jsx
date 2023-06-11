@@ -1,12 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
 import 'flowbite';
 import Home from './components/body/home/Home.jsx';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import NotFound from './components/body/NotFound.jsx'
-import AuthProvider from './provider/AuthProvider.jsx'
+import NotFound from './components/body/NotFound.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
+import Instructors from './components/body/Instructors.jsx';
+import Classes from './components/body/Classes.jsx';
+import Login from './components/body/join/Login.jsx';
+import Register from './components/body/join/Register.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +24,22 @@ const router = createBrowserRouter([
       {
         path: '/home',
         element: <Home></Home>
+      },
+      {
+        path: '/instructors',
+        element: <Instructors></Instructors>
+      },
+      {
+        path: '/classes',
+        element: <Classes></Classes>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       }
     ]
   },

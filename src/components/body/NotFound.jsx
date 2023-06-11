@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const NotFound = () => {
 
     return (
-        <div className='h-screen flex items-center justify-center text-white bg-black'>
-            <div className='flex flex-col items-center mb-20'>
-                <h1 className='text-5xl font-bold mb-5'>Sorry</h1>
-                <h1 className='text-5xl font-semibold mb-5'>Page not found</h1>
-                <div className='flex items-center'>
-                    <h1 className='text-9xl font-bold'>4</h1>
-                    <img className='w-24 h-24' src="https://www.digitiser2000.com/uploads/4/0/6/6/40667199/2803905.png?301" alt="" />
-                    <h1 className='text-9xl font-bold'>4</h1>
-                </div>
-                <p className='mt-5'>Go to the <Link className='text-orange-600 underline font-semibold' to="/">Home Page</Link></p>
+        <div className='h-screen flex items-center justify-center'>
+            <img className='ml-10' src="https://i.ibb.co/R7nLQp7/image.png" alt="" />
+            <div className='flex flex-col mb-8 ml-5'>
+                <h1 className='text-3xl font-bold mb-2'>Page not found</h1>
+                <h1 className='text-8xl font-bold mb-2'>404</h1>
+                <p className='font-bold my-3 text-lg'>Sorry, the page you were looking for doesn't exist.</p>
+                <p>• If you typed the web address, make sure that it is correct.</p>
+                <p>• If you pasted the web address, check that you copied the entire address.</p>
+                <p>• Try going to <Link to='/home' className='text-lime-600 font-bold'>duolingo.com</Link></p>
+                <p>• Follow us on <span className='text-blue-600 font-bold cursor-pointer'>Twitter</span> or <span className='text-blue-600 font-bold cursor-pointer'>Facebook</span></p>
             </div>
-        </div>
+        </div >
     );
 };
 

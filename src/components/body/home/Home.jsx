@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
+import { Carousel } from 'flowbite-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -17,12 +19,62 @@ const Home = () => {
 
     return (
         <div>
-            <img src="https://www.nanubarahagara.com/wp-content/uploads/2023/01/Young_boy_writing_multiple_languages_on_chalkboard_eli_asenova_GI_large.jpg" alt="" />
-            <img src="https://media.gettyimages.com/id/143176434/photo/master-greeter.jpg?s=612x612&w=gi&k=20&c=0a2qPi9Ue_AJXKyjsYlWe4W3Tp9u9nVWW_gv59K5EzQ=" alt="" />
-            <img src="https://i0.wp.com/improvingteaching.co.uk/wp-content/uploads/2016/11/language-learning.png?fit=640%2C480&ssl=1" alt="" />
-            <img src="https://www.optilingo.com/wp-content/uploads/2019/02/142539865.jpg" alt="" />
-            <img src="https://www.englishery.com/wp-content/uploads/2022/05/which-language-to-learn2.jpeg" alt="" />
-            <img src="https://www.amacad.org/sites/default/files/styles/large/public/media/images/iStock-478438526.jpg?itok=5l93U6eL" alt="" />
+            <section
+                style={{ backgroundColor: "rgba(5, 15, 0, 9)" }}
+            >
+                <Carousel>
+                    <div className="flex relative flex-col h-full items-center justify-center dark:text-white">
+                        <img className='w-full h-screen opacity-30' src="https://i.ibb.co/vq7CJ99/gettyimages-143176434-612x612.jpg" alt="" />
+                        <div className='absolute bottom-32 text-white flex flex-col items-center text-center mx-48'>
+                            <h1 className='text-5xl font-bold'>Learn new language</h1>
+                            <p className='text-gray-300 mt-5'>Enhance your linguistic skills from the comfort of your home! Join our dynamic online language classes and unlock a world of opportunities. Whether you're a beginner or an advanced learner, our experienced instructors will guide you through interactive sessions, personalized exercises, and engaging discussions. Don't miss this chance to broaden your horizons. Enroll today and embark on a language learning journey like no other!</p>
+                            <Link className='btn bg-lime-500 hover:bg-lime-600 normal-case border-0 mt-10 text-white text-lg font-bold'>See out all language classes</Link>
+                        </div>
+                    </div>
+                    <div className="flex relative flex-col h-full items-center justify-center dark:text-white">
+                        <img className='w-full h-screen opacity-30' src="https://i.ibb.co/VC4FLnt/gettyimages-143176434-612x612-4.jpg" alt="" />
+                        <div className='absolute bottom-32 text-white flex flex-col items-center text-center mx-48'>
+                            <h1 className='text-5xl font-bold'>Learn new language</h1>
+                            <p className='text-gray-300 mt-5'>Enhance your linguistic skills from the comfort of your home! Join our dynamic online language classes and unlock a world of opportunities. Whether you're a beginner or an advanced learner, our experienced instructors will guide you through interactive sessions, personalized exercises, and engaging discussions. Don't miss this chance to broaden your horizons. Enroll today and embark on a language learning journey like no other!</p>
+                            <Link className='btn bg-lime-500 hover:bg-lime-600 normal-case border-0 mt-10 text-white text-lg font-bold'>See out all language classes</Link>
+                        </div>
+                    </div>
+                    <div className="flex relative flex-col h-full items-center justify-center dark:text-white">
+                        <img className='w-full h-screen opacity-30' src="https://i.ibb.co/crH2yLy/gettyimages-143176434-612x612-1.jpg" alt="" />
+                        <div className='absolute bottom-32 text-white flex flex-col items-center text-center mx-48'>
+                            <h1 className='text-5xl font-bold'>Learn new language</h1>
+                            <p className='text-gray-300 mt-5'>Enhance your linguistic skills from the comfort of your home! Join our dynamic online language classes and unlock a world of opportunities. Whether you're a beginner or an advanced learner, our experienced instructors will guide you through interactive sessions, personalized exercises, and engaging discussions. Don't miss this chance to broaden your horizons. Enroll today and embark on a language learning journey like no other!</p>
+                            <Link className='btn bg-lime-500 hover:bg-lime-600 normal-case border-0 mt-10 text-white text-lg font-bold'>See out all language classes</Link>
+                        </div>
+                    </div>
+                    <div className="flex relative flex-col h-full items-center justify-center dark:text-white">
+                        <img className='w-full h-screen opacity-30' src="https://i.ibb.co/zSKpQGF/gettyimages-143176434-612x612-3.jpg" alt="" />
+                        <div className='absolute bottom-32 text-white flex flex-col items-center text-center mx-48'>
+                            <h1 className='text-5xl font-bold'>Learn new language</h1>
+                            <p className='text-gray-300 mt-5'>Enhance your linguistic skills from the comfort of your home! Join our dynamic online language classes and unlock a world of opportunities. Whether you're a beginner or an advanced learner, our experienced instructors will guide you through interactive sessions, personalized exercises, and engaging discussions. Don't miss this chance to broaden your horizons. Enroll today and embark on a language learning journey like no other!</p>
+                            <Link className='btn bg-lime-500 hover:bg-lime-600 normal-case border-0 mt-10 text-white text-lg font-bold'>See out all language classes</Link>
+                        </div>
+                    </div>
+                    <div className="flex relative flex-col h-full items-center justify-center dark:text-white">
+                        <img className='w-full h-screen opacity-30' src="https://i.ibb.co/XzGrhYN/gettyimages-143176434-612x612-2.jpg" alt="" />
+                        <div className='absolute bottom-32 text-white flex flex-col items-center text-center mx-48'>
+                            <h1 className='text-5xl font-bold'>Learn new language</h1>
+                            <p className='text-gray-300 mt-5'>Enhance your linguistic skills from the comfort of your home! Join our dynamic online language classes and unlock a world of opportunities. Whether you're a beginner or an advanced learner, our experienced instructors will guide you through interactive sessions, personalized exercises, and engaging discussions. Don't miss this chance to broaden your horizons. Enroll today and embark on a language learning journey like no other!</p>
+                            <Link className='btn bg-lime-500 hover:bg-lime-600 normal-case border-0 mt-10 text-white text-lg font-bold'>See out all language classes</Link>
+                        </div>
+                    </div>
+                </Carousel>
+            </section>
+
+            <section>
+                <h1>Our popular Classes</h1>
+            </section>
+
+            <section>
+                <h1>Our best instructors</h1>
+            </section>
+
+
         </div>
     );
 };
