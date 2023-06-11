@@ -38,7 +38,7 @@ const Register = () => {
                     name: result.user.displayName,
                     email: result.user.email,
                     img: result.user.photoURL,
-                    status: import.meta.env.VITE_STATUS
+                    status: "student"
                 }
                 fetch('http://localhost:7000/users', {
                     method: 'POST',
@@ -97,7 +97,7 @@ const Register = () => {
                             name: fullName,
                             email: email,
                             img: photo,
-                            status: import.meta.env.VITE_STATUS
+                            status: "student"
                         }
                         fetch('http://localhost:7000/users', {
                             method: 'POST',

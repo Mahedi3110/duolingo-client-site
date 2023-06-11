@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { Carousel } from 'flowbite-react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../../../provider/DataProvider';
 
 const Home = () => {
 
-    const [datas, setDatas] = useState([])
-
-    useEffect(() => {
-        const fetchFunction = async () => {
-            const res = await fetch(`https://game-on-new-server.vercel.app/category`);
-            const data = await res.json();
-            setDatas(data);
-        }
-        fetchFunction();
-    }, [])
-
+    const { instructors } = useContext(DataContext)
 
     return (
         <div>
@@ -71,7 +62,7 @@ const Home = () => {
             </section>
 
             <section>
-                <h1>Our best instructors</h1>
+                <h1>Meet Our best instructors</h1>
             </section>
 
 

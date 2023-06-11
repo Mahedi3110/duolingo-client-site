@@ -14,6 +14,7 @@ import Register from './components/body/join/Register.jsx'
 import Dashboard from './components/body/dashboard/Dashboard.jsx';
 import Profile from './components/body/Profile.jsx';
 import PrivateRoute from './privateRoute/PrivateRoute.jsx';
+import DataProvider from './provider/DataProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
-    <RouterProvider router={router} />
+    <DataProvider>
+      <RouterProvider router={router} />
+    </DataProvider>
   </AuthProvider>
 )
