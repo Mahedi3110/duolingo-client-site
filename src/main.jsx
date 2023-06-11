@@ -11,6 +11,8 @@ import Instructors from './components/body/Instructors.jsx';
 import Classes from './components/body/Classes.jsx';
 import Login from './components/body/join/Login.jsx';
 import Register from './components/body/join/Register.jsx'
+import Dashboard from './components/body/dashboard/Dashboard.jsx';
+import Profile from './components/body/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,8 +40,16 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path: "/register",
+        path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>
+      },
+      {
+        path: '/profile',
+        element: <Profile></Profile>
       }
     ]
   },
