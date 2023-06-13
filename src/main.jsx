@@ -20,13 +20,14 @@ import MyClasses from './components/body/dashboard/instructorOptions/MyClasses.j
 import InstructorRoute from './components/body/dashboard/instructorOptions/InstructorRoute.jsx'
 import StudentRoute from './components/body/dashboard/studentOptions/StudentRoute.jsx'
 import AdminRoute from './components/body/dashboard/adminOptions/AdminRoute.jsx'
-import Payment from './components/body/dashboard/studentOptions/Payment.jsx';
 import MyEnrolledClasses from './components/body/dashboard/studentOptions/MyEnrolledClasses.jsx'
 import MySelectedClasses from './components/body/dashboard/studentOptions/MySelectedClasses.jsx'
 import ManageUsers from './components/body/dashboard/adminOptions/ManageUsers.jsx'
 import ManageClasses from './components/body/dashboard/adminOptions/ManageClasses.jsx'
 import Update from './components/body/dashboard/instructorOptions/Update.jsx';
 import Details from './components/body/Details.jsx';
+import Payment from './components/body/dashboard/studentOptions/payment/Payment.jsx';
+import { Flowbite } from 'flowbite-react';
 
 const router = createBrowserRouter([
   {
@@ -114,7 +115,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
     <DataProvider>
-      <RouterProvider router={router} />
+      <Flowbite>
+        <RouterProvider router={router} />
+      </Flowbite>
     </DataProvider>
   </AuthProvider>
 )

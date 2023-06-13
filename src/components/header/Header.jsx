@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
-import { Navbar, Spinner, Tooltip } from 'flowbite-react';
+import { DarkThemeToggle, Navbar, Spinner, Tooltip } from 'flowbite-react';
 import { MdLogout } from "react-icons/md";
 import './Header.css'
 
@@ -58,7 +58,7 @@ const Header = () => {
 
                     <Navbar.Toggle />
                 </div>
-                <Navbar className='!bg-transparent mr-20'>
+                <Navbar className='!bg-transparent ml-20'>
                     <div className='mb-3 md:mb-0'>
                         <NavLink
                             className={({ isActive }) => isActive ? 'font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'font-bold hover:text-lime-600 mx-10'}
@@ -96,6 +96,7 @@ const Header = () => {
                                 <></>
                     }
                 </Navbar>
+                <DarkThemeToggle></DarkThemeToggle>
             </Navbar>
         </div>
     );

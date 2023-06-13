@@ -34,7 +34,7 @@ const DashboardRoutes = () => {
     return (
         <div>
             {
-                user && currectUser.status == 'admin' ?
+                user && currectUser?.status == 'admin' ?
                     <div className='flex flex-col'>
                         <NavLink className={({ isActive }) => isActive ? 'w-fit mb-7 font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'w-fit mb-7 font-bold hover:text-lime-600 mx-10'} to='/dashboard/manageClasses'>Manage Classes</NavLink>
                         <NavLink className={({ isActive }) => isActive ? 'w-fit mb-7 font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'w-fit mb-7 font-bold hover:text-lime-600 mx-10'} to='/dashboard/manageUsers'>Manage Users</NavLink>
@@ -42,7 +42,7 @@ const DashboardRoutes = () => {
                     :
                     <>
                         {
-                            user && currectUser.status == 'instructor' ?
+                            user && currectUser?.status == 'instructor' ?
                                 <div className='flex flex-col'>
                                     <NavLink className={({ isActive }) => isActive ? 'w-fit mb-7 font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'w-fit mb-7 font-bold hover:text-lime-600 mx-10'} to='/dashboard/addClasses'>Add a Class</NavLink>
                                     <NavLink className={({ isActive }) => isActive ? 'w-fit mb-7 font-bold border-b-4 border-lime-500 text-lime-600 mx-10' : 'w-fit mb-7 font-bold hover:text-lime-600 mx-10'} to='/dashboard/myClasses'>My Classes</NavLink>

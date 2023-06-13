@@ -15,6 +15,8 @@ const DataProvider = ({ children }) => {
     const [reCallClasses, setReCallClasses] = useState(true)
     const [loadingUsers, setLoadingUsers] = useState(true)
     const [loadingClasses, setLoadingClasses] = useState(true)
+    const [reCallSelect, setReCallSelect] = useState(true)
+    const [selected, setSelected] = useState()
     const [pendings, setPendings] = useState()
     const [approved, setApproved] = useState()
     const [denied, setDenied] = useState()
@@ -50,6 +52,15 @@ const DataProvider = ({ children }) => {
         fetchFunction();
     }, [reCallClasses])
 
+    useEffect(() => {
+        const fetchFunction = async () => {
+            const res = await fetch('http://localhost:7000/select')
+            const select = await res.json();
+            setSelected(select)
+        }
+        fetchFunction();
+    }, [reCallSelect])
+
 
     const authInfo = {
         admins,
@@ -66,8 +77,11 @@ const DataProvider = ({ children }) => {
         loadingClasses,
         setLoadingUsers,
         setLoadingClasses,
+        selected,
         instructors,
         reCallUsers,
+        reCallSelect,
+        setReCallSelect
     }
 
 

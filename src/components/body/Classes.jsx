@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../../provider/DataProvider';
+import { AuthContext } from '../../provider/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const Classes = () => {
     const { approved } = useContext(DataContext);
+    const { user } = useContext(AuthContext);
     return (
         <div className='mx-32 mt-28 mb-32'>
             <h1 className='text-center text-5xl font-bold'>Our all Classes</h1>
@@ -20,7 +22,12 @@ const Classes = () => {
                                     <h1>Name: {approv.name}</h1>
                                     <p>Price: {approv.price}/-</p>
                                 </div>
-                                <Link to={`/details/${approv?._id}`} className='btn bg-lime-500 hover:bg-lime-600 border-0 mt-1.5'>View Details</Link>
+                                {
+                                    user ?
+                                        <Link to={`/details/${approv?._id}`} className='btn bg-lime-500 hover:bg-lime-600 border-0 mt-1.5'>View Details</Link>
+                                        :
+                                        <Link to='/login' className='btn bg-lime-500 hover:bg-lime-600 border-0 mt-1.5'>View Details</Link>
+                                }
                             </div>
                         </div>
                     )
