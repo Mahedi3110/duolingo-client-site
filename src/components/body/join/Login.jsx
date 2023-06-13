@@ -29,7 +29,7 @@ const Login = () => {
                     img: result.user.photoURL,
                     status: "student"
                 }
-                fetch('http://localhost:7000/users', {
+                fetch('https://duolingo-server-lilac.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

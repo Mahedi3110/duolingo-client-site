@@ -6,7 +6,7 @@ const ManageClasses = () => {
     const { pendings, approved, reCallClasses, setReCallClasses } = useContext(DataContext)
     const handleDelete = id => {
         if (confirm("Are you really want to delete this product")) {
-            fetch(`http://localhost:7000/classes/${id}`, {
+            fetch(`https://duolingo-server-lilac.vercel.app/classes/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -33,7 +33,7 @@ const ManageClasses = () => {
         const status = 'approved';
         const addToDB = { photo, name, instructorName, email, availableSeats, price, about, status }
 
-        fetch(`http://localhost:7000/classes/${data._id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/classes/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -60,7 +60,7 @@ const ManageClasses = () => {
         const status = 'denied';
         const addToDB = { photo, name, instructorName, email, availableSeats, price, about, status }
 
-        fetch(`http://localhost:7000/classes/${data._id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/classes/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -6,7 +6,7 @@ const ManageUsers = () => {
 
     const handleDelete = id => {
         if (confirm("Are you really want to delete this product")) {
-            fetch(`http://localhost:7000/users/${id}`, {
+            fetch(`https://duolingo-server-lilac.vercel.app/users/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -26,7 +26,7 @@ const ManageUsers = () => {
         const status = 'admin';
         const addToDB = { status }
 
-        fetch(`http://localhost:7000/users/${id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/users/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const ManageUsers = () => {
         const status = 'student';
         const addToDB = { status }
 
-        fetch(`http://localhost:7000/users/${id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/users/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -66,7 +66,7 @@ const ManageUsers = () => {
         const status = 'instructor';
         const addToDB = { status }
 
-        fetch(`http://localhost:7000/users/${id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/users/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

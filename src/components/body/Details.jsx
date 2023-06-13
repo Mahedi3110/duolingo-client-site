@@ -23,7 +23,7 @@ const Details = () => {
         const id = data._id
         const addToDB = { photo, name, price, selectedBy, status, id }
 
-        fetch('http://localhost:7000/select', {
+        fetch('https://duolingo-server-lilac.vercel.app/select', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

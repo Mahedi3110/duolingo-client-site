@@ -23,7 +23,7 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchFunction = async () => {
-            const res = await fetch('http://localhost:7000/users')
+            const res = await fetch('https://duolingo-server-lilac.vercel.app/users')
             const users = await res.json();
             const instructor = users.filter(data => data.status === "instructor")
             const student = users.filter(data => data.status === "student")
@@ -39,7 +39,7 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchFunction = async () => {
-            const res = await fetch('http://localhost:7000/classes')
+            const res = await fetch('https://duolingo-server-lilac.vercel.app/classes')
             const classes = await res.json();
             const pending = classes.filter(data => data.status === "pending")
             const approv = classes.filter(data => data.status === "approved")
@@ -54,7 +54,7 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchFunction = async () => {
-            const res = await fetch('http://localhost:7000/select')
+            const res = await fetch('https://duolingo-server-lilac.vercel.app/select')
             const select = await res.json();
             setSelected(select)
         }

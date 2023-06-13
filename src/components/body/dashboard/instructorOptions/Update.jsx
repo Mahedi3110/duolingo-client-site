@@ -23,7 +23,7 @@ const Update = () => {
         const status = 'pending';
         const addToDB = { photo, name, instructorName, email, availableSeats, price, about, status }
 
-        fetch(`http://localhost:7000/classes/${data._id}`, {
+        fetch(`https://duolingo-server-lilac.vercel.app/classes/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

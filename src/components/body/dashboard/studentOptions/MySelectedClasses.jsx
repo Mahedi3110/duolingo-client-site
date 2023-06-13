@@ -11,7 +11,7 @@ const MySelectedClasses = () => {
 
     const handleDelete = id => {
         if (confirm("Are you really want to delete this product")) {
-            fetch(`http://localhost:7000/select/${id}`, {
+            fetch(`https://duolingo-server-lilac.vercel.app/select/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -32,7 +32,7 @@ const MySelectedClasses = () => {
         const addToDB = { status };
 
         if (confirm("Are you really want to pay for this class")) {
-            fetch(`http://localhost:7000/select/${id}`, {
+            fetch(`https://duolingo-server-lilac.vercel.app/select/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
