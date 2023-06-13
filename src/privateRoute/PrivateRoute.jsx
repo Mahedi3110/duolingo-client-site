@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
     if (loading) {
         return (
-            <div className='h-screen bg-black flex justify-center items-center'>
+            <div className='h-screen flex justify-center items-center'>
                 <Spinner
                     aria-label="Extra large spinner example"
                     size="xl"

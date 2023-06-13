@@ -103,7 +103,7 @@ const Login = () => {
                                     <input type={showPass1 ? 'text' : 'password'} placeholder="password" name='password' className={border3 ? "input input-bordered w-full border-gray-300" : "input input-bordered w-full border-red-700"} required />
                                     <div className='absolute top-3 right-3'>
                                         {
-                                            showPass1 ? <AiFillEye onClick={() => setShowPass1(!showPass1)} className="cursor-pointer text-2xl text-orange-500" /> : <AiFillEyeInvisible onClick={() => setShowPass1(!showPass1)} className="cursor-pointer text-2xl text-lime-600" />
+                                            showPass1 ? <AiFillEye onClick={() => setShowPass1(!showPass1)} className="cursor-pointer text-2xl text-lime-600" /> : <AiFillEyeInvisible onClick={() => setShowPass1(!showPass1)} className="cursor-pointer text-2xl text-lime-600" />
                                         }
                                     </div>
                                 </div>

@@ -6,14 +6,18 @@ import { createContext } from 'react';
 export const DataContext = createContext(null)
 
 const DataProvider = ({ children }) => {
+    const [allUsers, setAllUsers] = useState()
     const [admins, setAdmins] = useState()
     const [students, setStudents] = useState()
     const [instructors, setinstructors] = useState()
-    const [classes, setClasses] = useState()
-    const [reCallUsers, setReCallUsers] = useState(0)
-    const [reCallClasses, setReCallClasses] = useState(0)
+    const [allClasses, setAllClasses] = useState()
+    const [reCallUsers, setReCallUsers] = useState(true)
+    const [reCallClasses, setReCallClasses] = useState(true)
     const [loadingUsers, setLoadingUsers] = useState(true)
     const [loadingClasses, setLoadingClasses] = useState(true)
+    const [pendings, setPendings] = useState()
+    const [approved, setApproved] = useState()
+    const [denied, setDenied] = useState()
 
     useEffect(() => {
         const fetchFunction = async () => {
@@ -25,22 +29,45 @@ const DataProvider = ({ children }) => {
             setinstructors(instructor)
             setStudents(student)
             setAdmins(admin)
+            setAllUsers(users)
+            setLoadingUsers(false)
         }
         fetchFunction();
     }, [reCallUsers])
 
+    useEffect(() => {
+        const fetchFunction = async () => {
+            const res = await fetch('http://localhost:7000/classes')
+            const classes = await res.json();
+            const pending = classes.filter(data => data.status === "pending")
+            const approv = classes.filter(data => data.status === "approved")
+            const deni = classes.filter(data => data.status === "denied")
+            setDenied(deni)
+            setApproved(approv)
+            setPendings(pending)
+            setAllClasses(classes)
+        }
+        fetchFunction();
+    }, [reCallClasses])
+
 
     const authInfo = {
         admins,
-        classes,
+        approved,
+        allUsers,
+        allClasses,
+        reCallClasses,
         setReCallUsers,
         setReCallClasses,
+        denied,
+        students,
+        pendings,
         loadingUsers,
         loadingClasses,
         setLoadingUsers,
         setLoadingClasses,
         instructors,
-        students
+        reCallUsers,
     }
 
 

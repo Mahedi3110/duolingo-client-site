@@ -1,0 +1,6 @@
+.sideBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    max-height: 80vh;
+}
