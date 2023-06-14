@@ -35,6 +35,7 @@ const ManageUsers = () => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 if (data.modifiedCount) {
                     alert("Done")
                     setReCallUsers(!reCallUsers)
@@ -45,6 +46,10 @@ const ManageUsers = () => {
     const handleStudent = (id) => {
         const status = 'student';
         const addToDB = { status }
+
+        // http://localhost:7000
+
+        // https://duolingo-server-lilac.vercel.app
 
         fetch(`https://duolingo-server-lilac.vercel.app/users/${id}`, {
             method: 'PUT',

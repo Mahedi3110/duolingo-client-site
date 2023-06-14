@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Navigate, useLocation } from "react-router";
 import { AuthContext } from "../../../../provider/AuthProvider";
 import { DataContext } from "../../../../provider/DataProvider";
+import { Spinner } from "flowbite-react";
 
 
 const StudentRoute = ({ children }) => {
